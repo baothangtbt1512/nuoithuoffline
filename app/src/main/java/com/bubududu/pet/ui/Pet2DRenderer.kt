@@ -42,34 +42,34 @@ object Pet2DRenderer {
     private fun anchorSpecFor(pose: PetMoodPose): PoseAnchorSpec = when (pose) {
         PetMoodPose.BRUSH_TEETH -> PoseAnchorSpec(
             resId = R.drawable.pet_brush_teeth,
-            left = CharacterHeadSpec(0.24f, 0.07f, 0.25f, 0.40f, 0.36f, isBearDudu = true),
-            right = CharacterHeadSpec(0.75f, 0.08f, 0.74f, 0.40f, 0.36f, isBearDudu = false)
+            left = CharacterHeadSpec(0.24f, 0.06f, 0.26f, 0.36f, 0.36f, isBearDudu = true),
+            right = CharacterHeadSpec(0.75f, 0.07f, 0.74f, 0.37f, 0.36f, isBearDudu = false)
         )
         PetMoodPose.EAT_RICE -> PoseAnchorSpec(
             resId = R.drawable.pet_eat_rice,
-            left = CharacterHeadSpec(0.24f, 0.10f, 0.25f, 0.48f, 0.37f, isBearDudu = true),
-            right = CharacterHeadSpec(0.75f, 0.14f, 0.74f, 0.48f, 0.36f, isBearDudu = false)
+            left = CharacterHeadSpec(0.24f, 0.09f, 0.25f, 0.45f, 0.37f, isBearDudu = true),
+            right = CharacterHeadSpec(0.75f, 0.13f, 0.74f, 0.46f, 0.36f, isBearDudu = false)
         )
         PetMoodPose.SLEEP_BLANKET -> PoseAnchorSpec(
             resId = R.drawable.pet_sleep_blanket,
-            left = CharacterHeadSpec(0.26f, 0.19f, 0.26f, 0.43f, 0.34f, isBearDudu = true),
-            right = CharacterHeadSpec(0.73f, 0.19f, 0.73f, 0.43f, 0.34f, isBearDudu = false),
+            left = CharacterHeadSpec(0.26f, 0.14f, 0.26f, 0.43f, 0.34f, isBearDudu = true),
+            right = CharacterHeadSpec(0.73f, 0.14f, 0.73f, 0.43f, 0.34f, isBearDudu = false),
             hideGlassesWhileSleeping = true
         )
         PetMoodPose.HUNGRY -> PoseAnchorSpec(
             resId = R.drawable.pet_hungry,
-            left = CharacterHeadSpec(0.25f, 0.12f, 0.25f, 0.45f, 0.36f, isBearDudu = true),
-            right = CharacterHeadSpec(0.74f, 0.14f, 0.73f, 0.46f, 0.36f, isBearDudu = false)
+            left = CharacterHeadSpec(0.25f, 0.10f, 0.27f, 0.41f, 0.36f, isBearDudu = true),
+            right = CharacterHeadSpec(0.74f, 0.12f, 0.72f, 0.43f, 0.36f, isBearDudu = false)
         )
         PetMoodPose.CHILL_PLAY -> PoseAnchorSpec(
             resId = R.drawable.pet_chill_play,
-            left = CharacterHeadSpec(0.25f, 0.21f, 0.26f, 0.50f, 0.37f, isBearDudu = true),
-            right = CharacterHeadSpec(0.74f, 0.25f, 0.73f, 0.52f, 0.36f, isBearDudu = false)
+            left = CharacterHeadSpec(0.25f, 0.20f, 0.27f, 0.48f, 0.37f, isBearDudu = true),
+            right = CharacterHeadSpec(0.74f, 0.24f, 0.72f, 0.50f, 0.36f, isBearDudu = false)
         )
         PetMoodPose.HAPPY_WAVE -> PoseAnchorSpec(
             resId = R.drawable.pet_happy,
-            left = CharacterHeadSpec(0.25f, 0.22f, 0.25f, 0.52f, 0.35f, isBearDudu = false),
-            right = CharacterHeadSpec(0.75f, 0.20f, 0.75f, 0.50f, 0.35f, isBearDudu = true)
+            left = CharacterHeadSpec(0.25f, 0.21f, 0.25f, 0.51f, 0.35f, isBearDudu = false),
+            right = CharacterHeadSpec(0.75f, 0.19f, 0.75f, 0.49f, 0.35f, isBearDudu = true)
         )
     }
 
@@ -329,7 +329,7 @@ object Pet2DRenderer {
         val framePaint = Paint(Paint.ANTI_ALIAS_FLAG)
         val lensPaint = Paint(Paint.ANTI_ALIAS_FLAG)
 
-        val lensSpacing = unit * 0.195f
+        val lensSpacing = unit * 0.215f
         val lx = ex - lensSpacing
         val rx = ex + lensSpacing
 
@@ -337,8 +337,8 @@ object Pet2DRenderer {
             PetGlasses.NONE -> Unit
 
             PetGlasses.ROUND_SUN, PetGlasses.PINK_SHADES -> {
-                val radX = unit * 0.145f
-                val radY = unit * 0.118f
+                val radX = unit * 0.142f
+                val radY = unit * 0.114f
                 framePaint.color = when {
                     glasses == PetGlasses.PINK_SHADES -> Color.rgb(248, 174, 200)
                     isBearDudu -> Color.rgb(250, 216, 108)
